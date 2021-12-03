@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: serif;
+    
+}
+
+h1{
+    color: slateblue;
+    font-size: 50px;
+    font-weight: 100;
+}
+/*navbar*/
+
+.navbar ul{
+  list-style-type:none;
+  display: flex;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.navbar a{
+  margin-top: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  padding: .5em;
+}
+
+.container {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+  align-self: center;
+  justify-content: space-between;
+  }
+
+.navbar{
+  background-color: burlywood;
+ height: 6em;
+}
+
+.navbar a:hover{
+  border-bottom:2px solid rebeccapurple;
+}
+
+#here{
+  border-left: 2px solid rgb(233, 153, 62);
+}
+
+
+  /* body content on home page*/
+
+.image_container{
+  width: 50%;
+  border: 5px solid slateblue;
+  margin-top: 20px;
+  margin-left: 25%;
+  
+}
+img{
+  width: 100%;
+  border-bottom: 5px solid slateblue;
+
+}
+
+
+h2{
+  font-size: 20px;
+  color:slateblue;
+  margin-left: 15px;
+}
+
+p{
+  font-size: 18px;
+  color:slategray;
+  margin-left: 15px;
+}
+
+.grid{
+ display:grid; 
+ grid-template-columns: 3fr 2fr;
+ gap:30px;
+
+}
+
+#side-bar{
+  border: 1px dashed rebeccapurple;
+  color:slateblue;
+  padding:25px;
+  border-radius: 15px;
+}
+
+/*footer content*/
+
+footer{
+  background-color: slateblue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+  height: 28px;
+  margin-top: 15px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.footer{
+  color:rebeccapurple;
+}
+
+.footer a{
+  text-decoration: none;
+
+}
+
+
+/* animation on learn code page */
+
+
+  
+#square{
+  margin-left: 25%;
+  width: 100px;
+  height: 100px;
+  border: 1px solid slateblue;
+  border-radius: 5%;
+  background-color: slateblue;
+  animation-name: square_anim;
+  animation-duration: 10s;
+  animation-iteration-count: 3;
+  animation-direction: both;
+  -moz-animation-name: square_anim;
+  -moz-animation-duration: 10s;
+  -moz-animation-iteration-count: 3;
+  -moz-animation-direction: both;
+  
+}
+
+@-moz-keyframes square_anim{
+  0% {background-color: slateblue; margin-left: 26%; border-radius: 25%;}
+  25%{background-color: slategrey;margin-left: 37%; border-color:slategray;}
+  50%{background-color: steelblue; margin-left: 48%; border-radius: 25%;}
+  75% {background-color: rebeccapurple; margin-left:37%; border-color:slategray;}
+  100% {background-color: slateblue; border-radius:25%; margin-left:26%;}
+}
+
+
+@keyframes square_anim{
+  0% {background-color: slateblue; margin-left: 26%; border-radius: 25%;}
+  25%{background-color: slategrey;margin-left: 37%; border-color:slategray;}
+  50%{background-color: steelblue; margin-left: 48%; border-radius: 25%;}
+  75% {background-color: rebeccapurple; margin-left:37%; border-color:slategray;}
+  100% {background-color: slateblue; border-radius:25%; margin-left:26%;}
+}
+

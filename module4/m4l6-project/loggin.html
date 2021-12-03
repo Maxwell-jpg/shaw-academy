@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+    <title>log in</title>
+  </head>
+  <body id="loggin-bd">
+    <div class="bg-container">
+      <img class="bg-img" src="main-bg.jpg" alt="A car being washed." />
+
+      <div class="container">
+        <h1>log in</h1>
+
+        <form id="loggin-form" action="" method="post">
+          <div class="t-box">
+            <input
+              id="uname"
+              type="text"
+              name=""
+              value=""
+              placeholder="Username"
+            />
+          </div>
+
+          <div class="t-box">
+            <input
+              id="pwd"
+              type="password"
+              name=""
+              value=""
+              placeholder="Password"
+            />
+          </div>
+
+          <input
+            class="btn-log"
+            type="submit"
+            name=""
+            value="log in"
+            onclick=" validateLogin()"
+          />
+        </form>
+
+        <p id="b1" href="#">FORGOTTEN PASSWORD?</p>
+
+        <p id="b2" href="#">CREATE AN ACCOUNT</p>
+      </div>
+
+      <div class="modal">
+        <div class="modal-header">
+          <img id="modal-img" src="break-warning.png" alt="!!!WARNING!!!" />
+        </div>
+
+       
+          <p>incorrect details. Please try again</p>
+
+          <button
+            class="btn-log"
+            type="button"
+            name="button"
+            onclick="dismissModel()">TRY AGAIN</button>
+        </div.>
+      </div>
+    </div>
+
+
+  <script src="script.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,80 @@
+var employeeListHolder = document.querySelector(".employee-list")
+var interviewListHolder = document.querySelector(".interviews")
+var addEmployeeModal = document.querySelector("#employee-modal")
+var addInterviewModal = document.querySelector("#interview-modal")
+
+addEmployeeModal.style.display="none";
+addInterviewModal.style.display="none";
+
+function addEmployee(){
+
+    var name = document.querySelector("#fname").value;
+    var surname = document.querySelector("#lname").value;
+    var position = document.querySelector("#position").value;
+    var department = document.querySelector("#department").value;
+    var email= document.querySelector("#email").value;
+    var salary = document.querySelector("#salary").value;
+
+var newItem = `
+ <li>
+    <div class="employee-card" id="employee1">
+      <img class="E-img" src="default.png" alt="" />
+      <span>
+        <div class="employee-info" id="employee1-info">
+          <span class="name-format">`+name+`</span>
+          <span class="name-format">`+surname+`</span>
+          <br />
+          <span>`+position+`</span>
+          <br />
+          <span>`+department+`</span>
+          <br />
+          <span>`+email+`</span>
+          <br />
+          <span>£`+salary+`</span>
+        </div>
+      </span>
+    </div>
+  </li>
+      `; 
+
+      employeeListHolder.insertAdjacentHTML('beforeend',newItem);
+      addEmployeeModal.style.display="none"; 
+    }
+
+    function showAddEmpModal(){
+        addEmployeeModal.style.display="block";
+    }
+
+
+     function addInterview(){
+
+      var intDepartment = document.querySelector("#int-department").value;
+       var intPosition = document.querySelector("#int-position").value;
+       
+
+       var newInterview = `
+       <li>
+        <div class="list-item">
+          <h3>`+intDepartment+`</h3>
+          <p>`+intPosition+`</p>
+          <button class="accept-btn" type="button" name="button">Accept</button>
+          <button class="reject-btn" type="button" name="button">Reject</button>
+        </div>
+      </li> 
+      `;
+     interviewListHolder.insertAdjacentHTML('beforeend',newInterview);
+      addInterviewModal.style.display="none";  
+     }
+
+     function showAddIntModal(){
+       addInterviewModal.style.display="block";
+     }
+
+
+    
+
+     function exitModel(){
+        var exitModel = document.querySelector("#exit-model");
+   addEmployeeModal.style.display='none';
+   addInterviewModal.style.display='none';
+  }     

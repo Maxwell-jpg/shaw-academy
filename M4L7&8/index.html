@@ -1,0 +1,239 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>joes coaches</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <div class="nav-wrapper">
+      <nav>
+        <ul class="nav-list">
+          <img id="icon" src="joes-logo.png" alt="Joe's coaches logo" />
+          <li class="nav-item"><a href="index.html">Account</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- heads of Departments -->
+
+    <div class="employees">
+      <h2>Employees</h2>
+      <div class="employee-list">
+        <li>
+          <div class="employee-card" id="employee1">
+            <img src="jane.jpg" class="E-img" alt="Companies CEO" />
+            <span>
+              <div class="employee-info" id="employee1-info">
+                <span class="name-format">Jane</span>
+                <span class="name-format">Bloggs</span>
+                <br />
+                <span>CEO</span>
+                <br />
+                <span>Executive Department</span>
+                <br />
+                <span>j.bloggs@jcoaches.co.uk</span>
+                <br />
+                <span>£80,000</span>
+              </div>
+            </span>
+          </div>
+        </li>
+
+        <li>
+          <div class="employee-card" id="employee1">
+            <img src="jade.jpg" class="E-img" alt="head of maekrting" />
+            <span>
+              <div class="employee-info" id="employee1-info">
+                <span class="name-format">Jade</span>
+                <span class="name-format">Wong</span>
+                <br />
+                <span>Head of marketing</span>
+                <br />
+                <span>Marketing Department</span>
+                <br />
+                <span>j.wong@jcoaches.co.uk</span>
+                <br />
+                <span>£30,000</span>
+              </div>
+            </span>
+          </div>
+        </li>
+
+        <li>
+          <div class="employee-card" id="employee1">
+            <img src="bill.jpg" class="E-img" alt="" />
+            <span>
+              <div class="employee-info" id="employee1-info">
+                <span class="name-format">Bill</span>
+                <span class="name-format">West</span>
+                <br />
+                <span>Lead Developer</span>
+                <br />
+                <span>Technology Department</span>
+                <br />
+                <span>b.west@jcoaches.co.uk</span>
+                <br />
+                <span>£55,000</span>
+              </div>
+            </span>
+          </div>
+        </li>
+
+        <li>
+          <div class="employee-card" id="employee1">
+            <img class="E-img" src="james.jpg" alt="" />
+            <span>
+              <div class="employee-info" id="employee1-info">
+                <span class="name-format">James</span>
+                <span class="name-format">Crew</span>
+                <br />
+                <span>Head of Transport</span>
+                <br />
+                <span>Transport Department</span>
+                <br />
+                <span>j.crew@jcoaches.co.uk</span>
+                <br />
+                <span>£55,000</span>
+              </div>
+            </span>
+          </div>
+        </li>
+      </div>
+    </div>
+
+    <!-- upcoming interviews -->
+
+    <div class="interviews">
+      <h2>Upcoming Interviews</h2>
+      <li>
+        <div class="list-item">
+          <h3>Marketing</h3>
+
+          <p>Social Media Content Specialist</p>
+          <button class="accept-btn" type="button" name="button">Accept</button>
+          <button class="reject-btn" type="button" name="button">Reject</button>
+        </div>
+      </li>
+      <li>
+        <div class="list-item">
+          <h3>Driver</h3>
+          <p>Advanced CPC driver</p>
+          <button class="accept-btn" type="button" name="button">Accept</button>
+          <button class="reject-btn" type="button" name="button">Reject</button>
+        </div>
+      </li>
+      <li>
+        <div class="list-item">
+          <h3>Front-end Developer</h3>
+          <p>Specializing in UI</p>
+          <button class="accept-btn" type="button" name="button">Accept</button>
+          <button class="reject-btn" type="button" name="button">Reject</button>
+        </div>
+      </li>
+    </div>
+
+    <!-- add employee modal -->
+
+    <div id="employee-modal" class="modal">
+      <div class="modal-content">
+        <header class="modal-header">
+          <div class="modal-hcontent">
+            <span>
+              <button id="exit-model" onclick="exitModel()">X</button>
+            </span>
+
+            <h3>Add an Employee</h3>
+          </div>
+        </header>
+        <div class="modal-container">
+          <label for="fname">First Name</label>
+          <input id="fname" type="text" />
+          <br />
+          <label for="lname">Last Name</label>
+          <input id="lname" type="text" />
+          <br />
+          <label for="position">Position</label>
+          <input id="position" type="text" />
+          <br />
+          <label for="department">Department</label>
+          <input id="department" type="text" />
+          <br />
+          <label for="email">E-mail</label>
+          <input id="email" type="text" />
+          <br />
+          <label for="salary">Salary</label>
+          <input id="salary" type="text" />
+          <br />
+        </div>
+        <footer class="modal-footer">
+          <button
+            id="confirm-btn"
+            type="button"
+            name="button"
+            onclick="addEmployee()"
+          >
+            Confirm
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Add interview modal -->
+
+    <div id="interview-modal" class="modal">
+      <div class="modal-content">
+        <header class="modal-header">
+          <div class="modal-hcontent">
+            <span>
+              <button id="exit-model" onclick="exitModel()">X</button>
+            </span>
+            <h3>Add an Interview</h3>
+          </div>
+        </header>
+        <div class="modal-container">
+          <label for="fname">Department</label>
+          <input id="int-department" type="text" />
+          <br />
+          <label for="lname">Position</label>
+          <input id="int-position" type="text" />
+          <br />
+        </div>
+        <footer class="modal-footer">
+          <button
+            id="confirmInt-btn"
+            type="button"
+            name="button"
+            onclick="addInterview()"
+          >
+            Confrm
+          </button>
+        </footer>
+      </div>
+    </div>
+    <div class="btn-con">
+      <button
+        class="btn"
+        type="button"
+        name="button"
+        onclick="showAddIntModal()"
+      >
+        Add Interview
+      </button>
+      <button
+        class="btn"
+        type="button"
+        name="button"
+        onclick="showAddEmpModal()"
+      >
+        Add Employee
+      </button>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
